@@ -1,4 +1,4 @@
-package ctci.ch01.q1_01_is_unique;
+package ch01.q1_is_unique;
 
 import org.junit.Test;
 
@@ -14,4 +14,5 @@ public class QuestionBTest {
         assertTrue(QuestionB.isUniqueChars("kite"));
         assertTrue(QuestionB.isUniqueChars("padle"));
     }
+
 }
