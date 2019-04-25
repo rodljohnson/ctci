@@ -8,11 +8,11 @@ public class QuestionATest {
 
     @Test
     public void isUniqueCharsTest() {
-        assertTrue(QuestionB.isUniqueChars("abcde"));
-        assertTrue(QuestionB.isUniqueChars("hello"));
-        assertTrue(QuestionB.isUniqueChars("apple"));
-        assertTrue(QuestionB.isUniqueChars("kite"));
-        assertTrue(QuestionB.isUniqueChars("padle"));
+        assertTrue(QuestionA.isUniqueChars("abcde"));
+        assertFalse(QuestionA.isUniqueChars("hello"));
+        assertFalse(QuestionA.isUniqueChars("apple"));
+        assertTrue(QuestionA.isUniqueChars("kite"));
+        assertTrue(QuestionA.isUniqueChars("padle"));
     }
     
 }
