@@ -2,6 +2,7 @@
 .gradle
 build/
 bin/
+out/
 
 # Compiled class file
 *.class

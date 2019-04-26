@@ -10,7 +10,7 @@ public class QuestionATest {
     public void permutationTest() {
         assertTrue(QuestionA.permutation("apple", "papel"));
         assertTrue(QuestionA.permutation("carrot", "tarroc"));
-        assertTrue(QuestionA.permutation("hello", "llloh"));
+        assertFalse(QuestionA.permutation("hello", "llloh"));
     }
 
 }
