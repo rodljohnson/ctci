@@ -5,13 +5,13 @@ import util.AssortedMethods;
 
 import static org.junit.Assert.*;
 
-public class QuestionTest {
+public class UrlifyTest {
 
     @Test
     public void replaceSpaces() {
         String str = "Mr John Smith    ";
         char[] arr = str.toCharArray();
-        int trueLength = Question.findLastCharacter(arr) + 1;
-        assertEquals("Mr%20John%20Smith", AssortedMethods.charArrayToString(Question.replaceSpaces(arr, trueLength)));
+        int trueLength = Urlify.findLastCharacter(arr) + 1;
+        assertEquals("Mr%20John%20Smith", AssortedMethods.charArrayToString(Urlify.replaceSpaces(arr, trueLength)));
     }
 }

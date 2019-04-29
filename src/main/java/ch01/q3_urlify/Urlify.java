@@ -2,7 +2,7 @@ package ch01.q3_urlify;
 
 import util.AssortedMethods;
 
-public class Question {
+public class Urlify {
 
     // Assume string has sufficient free space at the end
     public static char[] replaceSpaces(char[] str, int trueLength) {
