@@ -1,4 +1,4 @@
-package ch01.q1_is_unique;
+package ch01;
 
 public class IsUnique {
 

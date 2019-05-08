@@ -1,5 +1,6 @@
-package ch01.q1_is_unique;
+package ch01;
 
+import ch01.IsUnique;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,5 +1,6 @@
-package ch01.q4_palindrome_partition;
+package ch01;
 
+import ch01.PalindromePartition;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

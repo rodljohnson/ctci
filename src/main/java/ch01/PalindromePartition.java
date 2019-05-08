@@ -1,4 +1,4 @@
-package ch01.q4_palindrome_partition;
+package ch01;
 
 public class PalindromePartition {
 

@@ -1,5 +1,6 @@
-package ch01.q3_urlify;
+package ch01;
 
+import ch01.Urlify;
 import org.junit.Test;
 import util.AssortedMethods;
 

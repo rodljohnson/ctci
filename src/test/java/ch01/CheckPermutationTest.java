@@ -1,4 +1,4 @@
-package ch01.q2_check_permutation;
+package ch01;
 
 import org.junit.Test;
 

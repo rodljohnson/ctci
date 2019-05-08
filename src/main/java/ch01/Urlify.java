@@ -1,4 +1,4 @@
-package ch01.q3_urlify;
+package ch01;
 
 import util.AssortedMethods;
 
