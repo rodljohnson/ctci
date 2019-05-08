@@ -1,6 +1,6 @@
 package ch01;
 
-public class PalindromePartition {
+public class Q04_PalindromePartition {
 
     public static boolean isPermutationOfPalindrome(String str) {
         throw new UnsupportedOperationException();
