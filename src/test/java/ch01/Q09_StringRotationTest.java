@@ -17,10 +17,3 @@ public class Q09_StringRotationTest {
         assertFalse(Q09_StringRotation.isRotationB(pairs[2][0], pairs[2][1]));
     }
 }
-
-//apple
-//pplea
-//pleap
-//leapp
-//eappl
-//apple
