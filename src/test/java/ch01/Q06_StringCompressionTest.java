@@ -11,5 +11,6 @@ public class Q06_StringCompressionTest {
         assertEquals("a5b4a4b2d2c1", Q06_StringCompression.compress("aaaaabbbbaaaabbddc"));
         assertEquals("a2b1c5a3", Q06_StringCompression.compress("aabcccccaaa"));
         assertEquals("abcdef", Q06_StringCompression.compress("abcdef"));
+        assertEquals("aabbcc", Q06_StringCompression.compress("aabbcc"));
     }
 }
