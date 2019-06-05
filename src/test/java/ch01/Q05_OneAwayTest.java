@@ -21,5 +21,9 @@ public class Q05_OneAwayTest {
         assertFalse(Q05_OneAway.oneEditAway("adfdsfadsf", "affdsfads"));
         assertTrue(Q05_OneAway.oneEditAway("pale", "pkle"));
         assertFalse(Q05_OneAway.oneEditAway("pkle", "pable"));
+        assertTrue(Q05_OneAway.oneEditAway("pale", "ple"));
+        assertTrue(Q05_OneAway.oneEditAway("pales", "pale"));
+        assertTrue(Q05_OneAway.oneEditAway("pale", "bale"));
+        assertFalse(Q05_OneAway.oneEditAway("pale", "bake"));
     }
 }
