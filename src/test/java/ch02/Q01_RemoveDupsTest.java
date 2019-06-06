@@ -19,5 +19,12 @@ public class Q01_RemoveDupsTest {
             first = second;
         }
         System.out.println(head.printForward());
+        LinkedListNode cloneA = head.clone();
+        LinkedListNode cloneB = head.clone();
+
+        Q01_RemoveDups.deleteDupsA(cloneA);
+        Q01_RemoveDups.deleteDupsB(cloneB);
+        System.out.println(cloneA.printForward());
+        System.out.println(cloneB.printForward());
     }
 }
