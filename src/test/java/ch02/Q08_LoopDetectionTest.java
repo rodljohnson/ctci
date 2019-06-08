@@ -9,8 +9,8 @@ public class Q08_LoopDetectionTest {
 
     @Test
     public void findBeginningTest() {
-        int list_length = 10;
-        int k = 9;
+        int list_length = 100;
+        int k = 10;
 
         // Create linked list
         LinkedListNode[] nodes = new LinkedListNode[list_length];
