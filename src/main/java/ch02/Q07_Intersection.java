@@ -4,7 +4,11 @@ import util.LinkedListNode;
 
 public class Q07_Intersection {
 
-    public static LinkedListNode findIntersection(LinkedListNode list1, LinkedListNode list2) {
+    public static LinkedListNode findIntersectionA(LinkedListNode list1, LinkedListNode list2) {
+        throw new UnsupportedOperationException();
+    }
+
+    public static LinkedListNode findIntersectionB(LinkedListNode list1, LinkedListNode list2) {
         throw new UnsupportedOperationException();
     }
 }

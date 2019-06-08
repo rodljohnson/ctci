@@ -23,8 +23,10 @@ public class Q07_IntersectionTest {
         System.out.println(list2.printForward());
 
 
-        LinkedListNode intersection = Q07_Intersection.findIntersection(list1, list2);
+        LinkedListNode intersectionA = Q07_Intersection.findIntersectionA(list1, list2);
+        LinkedListNode intersectionB = Q07_Intersection.findIntersectionB(list1, list2);
 
-        System.out.println(intersection.printForward());
+        System.out.println(intersectionA.printForward());
+        System.out.println(intersectionB.printForward());
     }
 }
