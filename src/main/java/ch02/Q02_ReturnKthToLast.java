@@ -1,10 +1,11 @@
 package ch02;
 
-import util.LinkedListNode;
-
+/**
+ * Implement an algorithm to find the kth to last element of a singly linked list
+ */
 public class Q02_ReturnKthToLast {
 
-    public static int printKthToLast(LinkedListNode head, int k) {
+    public LinkedListNode kthToLast(LinkedListNode head, int k) {
         throw new UnsupportedOperationException();
     }
 }

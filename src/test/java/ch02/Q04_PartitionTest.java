@@ -1,35 +1,40 @@
 package ch02;
 
 import org.junit.Test;
-import util.LinkedListNode;
 
 import static org.junit.Assert.*;
 
 public class Q04_PartitionTest {
 
-    public static LinkedListNode createLinkedList() {
-        /* Create linked list */
-        int[] vals = {3, 5, 8, 5, 10, 2, 1};
-        LinkedListNode head = new LinkedListNode(vals[0], null, null);
-        LinkedListNode current = head;
-        for (int i = 1; i < vals.length; i++) {
-            current = new LinkedListNode(vals[i], null, current);
-        }
-        return head;
+    private Q04_Partition s = new Q04_Partition();
+
+    @Test
+    public void withEmptyList() {
+        assertEquals(LinkedListNode.empty(), s.partition(LinkedListNode.empty(), 8));
     }
 
     @Test
-    public void partitionTest() {
-        System.out.println(createLinkedList().printForward());
+    public void withSortedList() {
+        assertEquals(LinkedListNode.of(1, 2, 3), s.partition(LinkedListNode.of(1, 2, 3), 2));
+    }
 
-        /* Partition */
-        LinkedListNode hA = Q04_Partition.partition(createLinkedList(), 5);
-        //LinkedListNode hB = QuestionB.partition(createLinkedList(), 5);
-        //LinkedListNode hC = QuestionC.partition(createLinkedList(), 5);
+    @Test
+    public void withSortedList_AndOutOfListX() {
+        assertEquals(LinkedListNode.of(3, 2, 1), s.partition(LinkedListNode.of(1, 2, 3), 4));
+    }
 
-        /* Print Result */
-        System.out.println(hA.printForward());
-        //System.out.println(hB.printForward());
-        //System.out.println(hC.printForward());
+    @Test
+    public void withSortedList_AndOutOfListX_Smaller() {
+        assertEquals(LinkedListNode.of(1, 2, 3), s.partition(LinkedListNode.of(1, 2, 3), 0));
+    }
+
+    @Test
+    public void withUnSortedList() {
+        assertEquals(LinkedListNode.of(1, 2, 4, 3, 5), s.partition(LinkedListNode.of(4, 3, 2, 5, 1), 3));
+    }
+
+    @Test
+    public void withUnSortedList_AndOutOfScopeX() {
+        assertEquals(LinkedListNode.of(1, 2, 4, 3, 6), s.partition(LinkedListNode.of(3, 4, 2, 6, 1), 5));
     }
 }

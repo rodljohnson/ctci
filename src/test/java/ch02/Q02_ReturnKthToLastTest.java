@@ -1,26 +1,25 @@
 package ch02;
 
 import org.junit.Test;
-import util.AssortedMethods;
-import util.LinkedListNode;
 
 import static org.junit.Assert.*;
 
 public class Q02_ReturnKthToLastTest {
 
+    private Q02_ReturnKthToLast s = new Q02_ReturnKthToLast();
+
     @Test
-    public void printKthToLast() {
-        int[] array = {0, 1, 2, 3, 4, 5, 6};
-        LinkedListNode head = AssortedMethods.createLinkedListFromArray(array);
-        System.out.println(head.printForward());
-        for (int k = 1; k <= array.length; k++) {
-            int data = Q02_ReturnKthToLast.printKthToLastA(head, k);
-            System.out.println(k + "th to last node is " + data);
-        }
-        System.out.println();
-        for (int k = 1; k <= array.length; k++) {
-            int data = Q02_ReturnKthToLast.printKthToLastB(head, k);
-            System.out.println(k + "th to last node is " + data);
-        }
+    public void withOutOfScopeK() {
+        assertNull(s.kthToLast(LinkedListNode.of(1, 2, 3), 3));
+    }
+
+    @Test
+    public void withZero() {
+        assertEquals(3, s.kthToLast(LinkedListNode.of(1, 2, 3), 0).val);
+    }
+
+    @Test
+    public void withNoneZero() {
+        assertEquals(2, s.kthToLast(LinkedListNode.of(1, 2, 3), 1).val);
     }
 }
