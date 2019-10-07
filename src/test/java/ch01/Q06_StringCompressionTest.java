@@ -6,11 +6,36 @@ import static org.junit.Assert.*;
 
 public class Q06_StringCompressionTest {
 
+    private Q06_StringCompression s = new Q06_StringCompression();
+
     @Test
-    public void compressTest() {
-        assertEquals("a5b4a4b2d2c1", Q06_StringCompression.compress("aaaaabbbbaaaabbddc"));
-        assertEquals("a2b1c5a3", Q06_StringCompression.compress("aabcccccaaa"));
-        assertEquals("abcdef", Q06_StringCompression.compress("abcdef"));
-        assertEquals("aabbcc", Q06_StringCompression.compress("aabbcc"));
+    public void withOneSingleChar() {
+        assertEquals("a", s.compress("a"));
     }
+
+    @Test
+    public void withTwoChars() {
+        assertEquals("aa", s.compress("aa"));
+    }
+
+    @Test
+    public void withThreeChars() {
+        assertEquals("3a", s.compress("aaa"));
+    }
+
+    @Test
+    public void withDifferentChars() {
+        assertEquals("aaab", s.compress("aaab"));
+    }
+
+    @Test
+    public void withDifferentChars_RepeatingSeveralTimes() {
+        assertEquals("3a2b", s.compress("aaabb"));
+    }
+
+    @Test
+    public void withDifferentChars_RepeatingInMoreSeqs() {
+        assertEquals("3a2b2a", s.compress("aaabbaa"));
+    }
+
 }

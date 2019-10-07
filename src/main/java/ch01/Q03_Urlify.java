@@ -1,21 +1,19 @@
 package ch01;
 
-import util.AssortedMethods;
-
+/**
+ * Write a method to replace all spaces in a string with '%20'
+ * You may assume that the string has sufficient space at the end to hold the additional characters,
+ * and that you are given the "true" length of the string.
+ * (Note: If implementing in Java,please use a character array so that you can perform this operation in place.)
+ * <p>
+ * EXAMPLE
+ * Input:  "Mr John Smith    ", 13
+ * Output: "Mr%20John%20Smith"
+ */
 public class Q03_Urlify {
 
-    // Assume string has sufficient free space at the end
-    public static char[] replaceSpaces(char[] str, int trueLength) {
+    public char[] replaceSpaces(char[] str, int trueLength) {
         throw new UnsupportedOperationException();
-    }
-
-    public static int findLastCharacter(char[] str) {
-        for (int i = str.length - 1; i >= 0;i--) {
-            if (str[i] != ' ') {
-                return i;
-            }
-        }
-        return -1;
     }
 
 }

@@ -6,14 +6,35 @@ import static org.junit.Assert.*;
 
 public class Q09_StringRotationTest {
 
+    private Q09_StringRotation s = new Q09_StringRotation();
+
     @Test
-    public void isRotationTest() {
-        String[][] pairs = {{"apple", "pleap"}, {"waterbottle", "erbottlewat"}, {"camera", "macera"}};
-        assertTrue(Q09_StringRotation.isRotationA(pairs[0][0], pairs[0][1]));
-        assertTrue(Q09_StringRotation.isRotationA(pairs[1][0], pairs[1][1]));
-        assertFalse(Q09_StringRotation.isRotationA(pairs[2][0], pairs[2][1]));
-        assertTrue(Q09_StringRotation.isRotationB(pairs[0][0], pairs[0][1]));
-        assertTrue(Q09_StringRotation.isRotationB(pairs[1][0], pairs[1][1]));
-        assertFalse(Q09_StringRotation.isRotationB(pairs[2][0], pairs[2][1]));
+    public void withEmpty() {
+        assertTrue(s.isRotation("", ""));
+    }
+
+    @Test
+    public void withSameWord() {
+        assertTrue(s.isRotation("hello", "hello"));
+    }
+
+    @Test
+    public void withRotated() {
+        assertTrue(s.isRotation("hello", "llohe"));
+    }
+
+    @Test
+    public void withSubstring_ButDifferentSize() {
+        assertFalse(s.isRotation("hello", "llo"));
+    }
+
+    @Test
+    public void withDifferentWords() {
+        assertFalse(s.isRotation("hello", "world"));
+    }
+
+    @Test
+    public void withNotRotated() {
+        assertFalse(s.isRotation("hello", "oehll"));
     }
 }

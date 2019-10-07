@@ -1,63 +1,50 @@
 package ch01;
 
-import org.junit.BeforeClass;
+import java.util.Arrays;
 import org.junit.Test;
-import util.AssortedMethods;
+
+import static org.junit.Assert.*;
 
 public class Q08_ZeroMatrixTest {
 
-    public static int[][] matrix;
+    private Q08_ZeroMatrix s = new Q08_ZeroMatrix();
 
-    @BeforeClass
-    public static void init() {
-        int nrows = 4;
-        int ncols = 4;
-        matrix = AssortedMethods.randomMatrix(nrows, ncols, -10, 10);
-        AssortedMethods.printMatrix(matrix);
+    @Test
+    public void withEmpty() {
+        assertTrue(Arrays.deepEquals(new int[][]{{}}, s.zero(new int[][]{{}})));
     }
 
     @Test
-    public void  setZerosATest() {
-        int[][] clone = cloneMatrix(matrix);
-        Q08_ZeroMatrix.setZerosA(clone);
-
-        System.out.println();
-
-        AssortedMethods.printMatrix(clone);
-
-        System.out.println();
+    public void withOneOne() {
+        assertTrue(Arrays.deepEquals(new int[][]{{1}}, s.zero(new int[][]{{1}})));
     }
 
     @Test
-    public void  setZerosBTest() {
-        int[][] clone = cloneMatrix(matrix);
-        Q08_ZeroMatrix.setZerosB(clone);
-
-        System.out.println();
-
-        AssortedMethods.printMatrix(clone);
-
-        System.out.println();
+    public void withOneOne_Zero() {
+        assertTrue(Arrays.deepEquals(new int[][]{{0}}, s.zero(new int[][]{{0}})));
     }
 
     @Test
-    public void  setZerosCTest() {
-        int[][] clone = cloneMatrix(matrix);
-        Q08_ZeroMatrix.setZerosC(clone);
-
-        System.out.println();
-
-        AssortedMethods.printMatrix(clone);
+    public void withOneTwo() {
+        assertTrue(Arrays.deepEquals(new int[][]{{0, 0}}, s.zero(new int[][]{{0, 0}})));
     }
 
-    public static int[][] cloneMatrix(int[][] matrix) {
-        int[][] c = new int[matrix.length][matrix[0].length];
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                c[i][j] = matrix[i][j];
-            }
-        }
-        return c;
+    @Test
+    public void withTwoTwo() {
+        assertTrue(Arrays.deepEquals(new int[][]{{0, 0}, {0, 1}}, s.zero(new int[][]{{0, 1}, {1, 1}})));
+    }
+
+    @Test
+    public void withThreeTree() {
+        assertTrue(Arrays.deepEquals(
+            new int[][]{
+                {1, 0, 3},
+                {0, 0, 0},
+                {7, 0, 9}}, s.zero(
+                new int[][]{
+                    {1, 2, 3},
+                    {4, 0, 6},
+                    {7, 8, 9}})));
     }
 
 }

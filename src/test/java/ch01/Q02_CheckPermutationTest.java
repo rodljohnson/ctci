@@ -6,15 +6,35 @@ import static org.junit.Assert.*;
 
 public class Q02_CheckPermutationTest {
 
+    private Q02_CheckPermutation s = new Q02_CheckPermutation();
     @Test
-    public void permutationTest() {
-        assertTrue(Q02_CheckPermutation.permutationA("apple", "papel"));
-        assertTrue(Q02_CheckPermutation.permutationA("carrot", "tarroc"));
-        assertFalse(Q02_CheckPermutation.permutationA("hello", "llloh"));
+    public void withEmptyString() {
+        assertTrue(s.permutation("", ""));
+    }
 
-        assertTrue(Q02_CheckPermutation.permutationB("apple", "papel"));
-        assertTrue(Q02_CheckPermutation.permutationB("carrot", "tarroc"));
-        assertFalse(Q02_CheckPermutation.permutationB("hello", "llloh"));
+    @Test
+    public void withOneSingleChar() {
+        assertTrue(s.permutation("a", "a"));
+    }
+
+    @Test
+    public void withOneSingleDifferentChar() {
+        assertFalse(s.permutation("a", "b"));
+    }
+
+    @Test
+    public void withThreeChars() {
+        assertTrue(s.permutation("abc", "bac"));
+    }
+
+    @Test
+    public void withRepeatingChars() {
+        assertTrue(s.permutation("aabbc", "bcaba"));
+    }
+
+    @Test
+    public void withDifferentLength() {
+        assertFalse(s.permutation("abc", "ab"));
     }
 
 }

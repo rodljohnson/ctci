@@ -1,16 +1,11 @@
 package ch01;
 
+/**
+ * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
+ */
 public class Q08_ZeroMatrix {
 
-    public static void setZerosA(int[][] matrix) {
-        throw new UnsupportedOperationException();
-    }
-
-    public static void setZerosB(int[][] matrix) {
-        throw new UnsupportedOperationException();
-    }
-
-    public static void setZerosC(int[][] matrix) {
+    public int[][] zero(int[][] matrix) {
         throw new UnsupportedOperationException();
     }
 

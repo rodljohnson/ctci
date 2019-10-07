@@ -1,12 +1,11 @@
 package ch01;
 
+/**
+ * Implement an algorithm to determine if a string has all unique characters.
+ */
 public class Q01_IsUnique {
 
-    public static boolean isUniqueCharsA(String str) {
-        throw new UnsupportedOperationException();
-    }
-
-    public static boolean isUniqueCharsB(String str) {
+    public boolean isUniqueChars(String str) {
         throw new UnsupportedOperationException();
     }
 

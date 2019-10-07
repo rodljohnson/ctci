@@ -6,24 +6,40 @@ import static org.junit.Assert.*;
 
 public class Q05_OneAwayTest {
 
+    private Q05_OneAway s = new Q05_OneAway();
+
     @Test
-    public void oneEditAwayTest() {
-        assertTrue(Q05_OneAway.oneEditAway("a", "b"));
-        assertTrue(Q05_OneAway.oneEditAway("", "d"));
-        assertTrue(Q05_OneAway.oneEditAway("d", "de"));
-        assertFalse(Q05_OneAway.oneEditAway("pale", "pse"));
-        assertTrue(Q05_OneAway.oneEditAway("acdsfdsfadsf", "acdsgdsfadsf"));
-        assertTrue(Q05_OneAway.oneEditAway("acdsfdsfadsf", "acdsfdfadsf"));
-        assertTrue(Q05_OneAway.oneEditAway("acdsfdsfadsf", "acdsfdsfads"));
-        assertTrue(Q05_OneAway.oneEditAway("acdsfdsfadsf", "cdsfdsfadsf"));
-        assertFalse(Q05_OneAway.oneEditAway("adfdsfadsf", "acdfdsfdsf"));
-        assertFalse(Q05_OneAway.oneEditAway("adfdsfadsf", "bdfdsfadsg"));
-        assertFalse(Q05_OneAway.oneEditAway("adfdsfadsf", "affdsfads"));
-        assertTrue(Q05_OneAway.oneEditAway("pale", "pkle"));
-        assertFalse(Q05_OneAway.oneEditAway("pkle", "pable"));
-        assertTrue(Q05_OneAway.oneEditAway("pale", "ple"));
-        assertTrue(Q05_OneAway.oneEditAway("pales", "pale"));
-        assertTrue(Q05_OneAway.oneEditAway("pale", "bale"));
-        assertFalse(Q05_OneAway.oneEditAway("pale", "bake"));
+    public void withEmpty() {
+        assertTrue(s.oneEditAway("", ""));
+    }
+
+    @Test
+    public void withOneEmpty() {
+        assertTrue(s.oneEditAway("", "b"));
+    }
+
+    @Test
+    public void withTwoSingleWords() {
+        assertTrue(s.oneEditAway("a", "b"));
+    }
+
+    @Test
+    public void withOneInsertion() {
+        assertTrue(s.oneEditAway("pae", "pale"));
+    }
+
+    @Test
+    public void withOneDeletion() {
+        assertTrue(s.oneEditAway("pales", "paes"));
+    }
+
+    @Test
+    public void withOneReplace() {
+        assertTrue(s.oneEditAway("pawe", "pave"));
+    }
+
+    @Test
+    public void withMoreEdits() {
+        assertFalse(s.oneEditAway("paxye", "pamne"));
     }
 }

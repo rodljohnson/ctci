@@ -1,17 +1,30 @@
 package ch01;
 
 import org.junit.Test;
-import util.AssortedMethods;
 
 import static org.junit.Assert.*;
 
 public class Q03_UrlifyTest {
 
+    private Q03_Urlify s = new Q03_Urlify();
+
     @Test
-    public void replaceSpaces() {
-        String str = "Mr John Smith    ";
-        char[] arr = str.toCharArray();
-        int trueLength = Q03_Urlify.findLastCharacter(arr) + 1;
-        assertEquals("Mr%20John%20Smith", AssortedMethods.charArrayToString(Q03_Urlify.replaceSpaces(arr, trueLength)));
+    public void withNoSpace() {
+        assertArrayEquals("hello".toCharArray(), s.replaceSpaces("hello".toCharArray(), 5));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void withInsufficientLength() {
+        s.replaceSpaces("hello world ".toCharArray(), 11);
+    }
+
+    @Test
+    public void withOneSpace() {
+        assertArrayEquals("hello%20world".toCharArray(), s.replaceSpaces("hello world  ".toCharArray(), 11));
+    }
+
+    @Test
+    public void withTwoSpaces() {
+        assertArrayEquals("hello%20world%20bob".toCharArray(), s.replaceSpaces("hello world bob    ".toCharArray(), 15));
     }
 }
