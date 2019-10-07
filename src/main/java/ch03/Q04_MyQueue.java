@@ -1,24 +1,19 @@
 package ch03;
 
-public class Q04_MyQueue<T> {
+public class Q04_MyQueue {
 
-  public Q04_MyQueue() {
-
+  void enqueue(int val) {
   }
 
-  public int size() {
+  int size() {
     throw new UnsupportedOperationException();
   }
 
-  public void add(T value) {
+  int peek() {
     throw new UnsupportedOperationException();
   }
 
-  public T peek() {
-    throw new UnsupportedOperationException();
-  }
-
-  public T remove() {
+  int dequeue() {
     throw new UnsupportedOperationException();
   }
 

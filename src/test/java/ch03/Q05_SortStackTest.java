@@ -2,23 +2,37 @@ package ch03;
 
 import java.util.Stack;
 import org.junit.Test;
-import util.AssortedMethods;
+
+import static org.junit.Assert.*;
 
 public class Q05_SortStackTest {
 
+  private Q05_SortStack s = new Q05_SortStack();
+
   @Test
-  public void sortStackTest() {
-    Stack<Integer> s = new Stack<Integer>();
-    for (int i = 0; i < 10; i++) {
-      int r = AssortedMethods.randomIntInRange(0,  1000);
-      s.push(r);
-    }
+  public void withAlreadySorted() {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(3);
+    stack.push(2);
+    stack.push(1);
+    Stack<Integer> result = s.sort(stack);
+    assertEquals(1, result.pop().intValue());
+    assertEquals(2, result.pop().intValue());
+    assertEquals(3, result.pop().intValue());
+  }
 
-    Q05_SortStack.sort(s);
-
-    while(!s.isEmpty()) {
-      System.out.println(s.pop());
-    }
+  @Test
+  public void withUnSorted() {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(2);
+    stack.push(5);
+    stack.push(3);
+    stack.push(4);
+    Stack<Integer> result = s.sort(stack);
+    assertEquals(2, result.pop().intValue());
+    assertEquals(3, result.pop().intValue());
+    assertEquals(4, result.pop().intValue());
+    assertEquals(5, result.pop().intValue());
   }
 
 }

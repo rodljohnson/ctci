@@ -5,30 +5,18 @@ import java.util.Stack;
 
 public class Q03_SetOfStacks {
 
-  ArrayList<Stack> stacks = new ArrayList<Stack>();
-  public int capacity;
-
-  public Q03_SetOfStacks(int capacity) {
-    this.capacity = capacity;
+  Q03_SetOfStacks(int threshold) {
   }
 
-  public void push(int v) {
+  void push(int val) {
     throw new UnsupportedOperationException();
   }
 
-  public int pop() {
+  int pop() {
     throw new UnsupportedOperationException();
   }
 
-  public int popAt(int index) {
-    throw new UnsupportedOperationException();
-  }
-
-  public int leftShift(int index, boolean removeTop) {
-    throw new UnsupportedOperationException();
-  }
-
-  public boolean isEmpty() {
+  int popAt(int stackNum) {
     throw new UnsupportedOperationException();
   }
 

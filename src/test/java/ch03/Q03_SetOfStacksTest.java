@@ -2,19 +2,52 @@ package ch03;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
 
 public class Q03_SetOfStacksTest {
 
   @Test
-  public void setOfStacksTest() {
-    int capacity_per_substack = 5;
-    Q03_SetOfStacks set = new Q03_SetOfStacks(capacity_per_substack);
-    for (int i = 0; i < 34; i++) {
-      set.push(i);
-    }
-    for (int i = 0; i < 35; i++) {
-      System.out.println("Popped " + set.pop());
-    }
+  public void withBigThreshold() {
+    Q03_SetOfStacks stack = new Q03_SetOfStacks(100);
+    stack.push(3);
+    stack.push(4);
+    stack.push(5);
+    stack.push(6);
+    assertEquals(6, stack.pop());
+    assertEquals(5, stack.pop());
+    assertEquals(4, stack.pop());
+    assertEquals(3, stack.pop());
+  }
+
+  @Test
+  public void withSmallThreshold() {
+    Q03_SetOfStacks stack = new Q03_SetOfStacks(2);
+    stack.push(3);
+    stack.push(4);
+    stack.push(5);
+    stack.push(6);
+    assertEquals(6, stack.pop());
+    assertEquals(5, stack.pop());
+    assertEquals(4, stack.pop());
+    assertEquals(3, stack.pop());
+  }
+
+  @Test
+  public void withSmallThreshold_PopAtIndex() {
+    Q03_SetOfStacks stack = new Q03_SetOfStacks(2);
+    stack.push(3);
+    stack.push(4);
+    stack.push(5);
+    stack.push(6);
+    stack.push(7);
+    stack.push(8);
+
+    assertEquals(6, stack.popAt(1));
+    assertEquals(7, stack.popAt(1));
+    assertEquals(8, stack.pop());
+    assertEquals(4, stack.popAt(0));
+    assertEquals(5, stack.pop());
+    assertEquals(3, stack.pop());
   }
 
 }

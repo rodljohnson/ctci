@@ -2,30 +2,38 @@ package ch03;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class Q06_AnimalQueueTest {
 
+  private Q06_AnimalQueue s = new Q06_AnimalQueue();
+
   @Test
-  public void animalQueueTest() {
-    Q06_AnimalQueue animals = new Q06_AnimalQueue();
-    animals.enqueue(new Cat("Callie"));
-    animals.enqueue(new Cat("Kiki"));
-    animals.enqueue(new Dog("Fido"));
-    animals.enqueue(new Dog("Dora"));
-    animals.enqueue(new Cat("Kari"));
-    animals.enqueue(new Dog("Dexter"));
-    animals.enqueue(new Dog("Dobo"));
-    animals.enqueue(new Cat("Copa"));
+  public void withOrdinaryQueue() {
+    s.enqueueCat(5);
+    s.enqueueDog(4);
+    s.enqueueCat(6);
+    s.enqueueCat(7);
 
-    System.out.println(animals.dequeueAny().name());
-    System.out.println(animals.dequeueAny().name());
-    System.out.println(animals.dequeueAny().name());
+    assertEquals(5, s.dequeueAny());
+    assertEquals(4, s.dequeueAny());
+    assertEquals(6, s.dequeueAny());
+    assertEquals(7, s.dequeueAny());
+  }
 
-    animals.enqueue(new Dog("Dapa"));
-    animals.enqueue(new Cat("Kilo"));
+  @Test
+  public void withCatDogOldest() {
+    s.enqueueCat(5);
+    s.enqueueCat(3);
+    s.enqueueDog(6);
+    s.enqueueDog(2);
+    s.enqueueCat(1);
 
-    while (animals.size() != 0) {
-      System.out.println(animals.dequeueAny().name());
-    }
+    assertEquals(6, s.dequeueDog());
+    assertEquals(5, s.dequeueAny());
+    assertEquals(3, s.dequeueAny());
+    assertEquals(1, s.dequeueCat());
+    assertEquals(2, s.dequeueDog());
   }
 
 }

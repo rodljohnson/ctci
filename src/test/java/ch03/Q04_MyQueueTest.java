@@ -1,43 +1,43 @@
 package ch03;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import org.junit.Test;
-import util.AssortedMethods;
+
+import static org.junit.Assert.*;
 
 public class Q04_MyQueueTest {
 
+  private Q04_MyQueue s = new Q04_MyQueue();
+
   @Test
-  public void myQueueTest() {
-    Q04_MyQueue<Integer> my_queue = new Q04_MyQueue<Integer>();
-
-    // Let's test our code against a "real" queue
-    Queue<Integer> test_queue = new LinkedList<Integer>();
-
-    for (int i = 0; i < 100; i++) {
-      int choice = AssortedMethods.randomIntInRange(0, 10);
-      if (choice <= 5) { // enqueue
-        int element = AssortedMethods.randomIntInRange(1, 10);
-        test_queue.add(element);
-        my_queue.add(element);
-        System.out.println("Enqueued " + element);
-      } else if (test_queue.size() > 0) {
-        int top1 = test_queue.remove();
-        int top2 = my_queue.remove();
-        if (top1 != top2) { // Check for error
-          System.out.println("******* FAILURE - DIFFERENT TOPS: " + top1 + ", " + top2);
-        }
-        System.out.println("Dequeued " + top1);
-      }
-
-      if (test_queue.size() == my_queue.size()) {
-        if (test_queue.size() > 0 && test_queue.peek() != my_queue.peek()) {
-          System.out.println("******* FAILURE - DIFFERENT TOPS: " + test_queue.peek() + ", " + my_queue.peek() + " ******");
-        }
-      } else {
-        System.out.println("******* FAILURE - DIFFERENT SIZES ******");
-      }
-    }
-
+  public void withAllEnqueueAndAllDequeue() {
+    s.enqueue(1);
+    s.enqueue(2);
+    s.enqueue(3);
+    assertEquals(3, s.size());
+    assertEquals(1, s.dequeue());
+    assertEquals(2, s.size());
+    assertEquals(2, s.dequeue());
+    assertEquals(3, s.dequeue());
   }
+
+  @Test
+  public void withInterleavingEnqueueAndDequeue() {
+    s.enqueue(1);
+    assertEquals(1, s.dequeue());
+    s.enqueue(2);
+    s.enqueue(3);
+    assertEquals(2, s.peek());
+    assertEquals(2, s.dequeue());
+    s.enqueue(4);
+    assertEquals(3, s.dequeue());
+    assertEquals(4, s.dequeue());
+  }
+
+  @Test(expected = RuntimeException.class)
+  public void withEmptyQueue() {
+    s.enqueue(1);
+    s.dequeue();
+    s.dequeue();
+  }
+
 }
