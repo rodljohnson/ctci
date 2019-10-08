@@ -1,27 +1,13 @@
-# Gradle
-.gradle
-build/
-bin/
-out/
+# inverse ignore
+/*
 
-# Compiled class file
-*.class
+!.gitignore
 
-# Package Files
-*.jar
+!build.gradle
+!settings.gradle
+!gradlew*
+!gradle/
 
-# Intellij project files
-*.iml
-*.ipr
-*.iws
-.idea/
+!src/
 
-# Eclipse project files
-.classpath
-.project
-
-# generated files
-bin/
-gen/
-
-.DS_Store/
+!README.md
