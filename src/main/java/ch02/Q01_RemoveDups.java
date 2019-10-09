@@ -1,13 +1,12 @@
 package ch02;
 
 /**
- * Remove Dups!
- * Write code to remove duplicates from an unsorted linked list.
+ * Remove Dups! Write code to remove duplicates from an unsorted linked list.
  */
-public class Q01_RemoveDups {
+class Q01_RemoveDups {
 
-    public LinkedListNode deleteDups(LinkedListNode head) {
-        throw new UnsupportedOperationException();
-    }
+  public LinkedListNode deleteDups(LinkedListNode head) {
+    throw new UnsupportedOperationException();
+  }
 
 }

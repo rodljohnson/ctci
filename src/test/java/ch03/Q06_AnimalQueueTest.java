@@ -1,10 +1,10 @@
 package ch03;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q06_AnimalQueueTest {
+class Q06_AnimalQueueTest {
 
   private Q06_AnimalQueue s = new Q06_AnimalQueue();
 

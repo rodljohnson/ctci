@@ -1,10 +1,12 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q11_RandomNodeTest {
+class Q11_RandomNodeTest {
 
   @Test
   public void withSimpleCase() {

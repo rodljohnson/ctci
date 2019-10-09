@@ -11,7 +11,7 @@ package ch03;
  * <p>
  * You may use the built-in Linked list data structure.
  */
-public class Q06_AnimalQueue {
+class Q06_AnimalQueue {
 
   void enqueueDog(int num) {
     throw new UnsupportedOperationException();

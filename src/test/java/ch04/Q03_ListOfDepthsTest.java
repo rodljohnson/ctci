@@ -1,5 +1,7 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,9 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q03_ListOfDepthsTest {
+class Q03_ListOfDepthsTest {
 
   private Q03_ListOfDepths s = new Q03_ListOfDepths();
 

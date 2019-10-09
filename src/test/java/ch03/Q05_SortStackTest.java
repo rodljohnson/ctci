@@ -1,11 +1,11 @@
 package ch03;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Stack;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q05_SortStackTest {
+class Q05_SortStackTest {
 
   private Q05_SortStack s = new Q05_SortStack();
 

@@ -1,10 +1,10 @@
 package ch03;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q01_ThreeInOneTest {
+class Q01_ThreeInOneTest {
 
   @Test
   public void withStackSize1() {
@@ -16,7 +16,6 @@ public class Q01_ThreeInOneTest {
     assertEquals(1, s.pop(1));
     assertEquals(2, s.pop(2));
   }
-
 
   @Test
   public void withStackSize2() {

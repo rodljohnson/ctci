@@ -1,10 +1,11 @@
 package ch04;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q01_RouteBetweenNodesTest {
+class Q01_RouteBetweenNodesTest {
 
   @Test
   public void withTwoVertex() {

@@ -1,10 +1,11 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q06_SuccessorTest {
+class Q06_SuccessorTest {
 
   private Q06_Successor s = new Q06_Successor();
 

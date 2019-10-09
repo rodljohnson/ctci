@@ -1,18 +1,19 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Arrays;
 import java.util.Collections;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q09_BSTSequencesTest {
+class Q09_BSTSequencesTest {
 
   private Q09_BSTSequences s = new Q09_BSTSequences();
 
   @Test
   public void withOneNode() {
-    assertEquals(Collections.singletonList(Collections.singletonList(1)), s.sequences(new BinaryTreeNode(1)));
+    assertEquals(Collections.singletonList(Collections.singletonList(1)),
+        s.sequences(new BinaryTreeNode(1)));
   }
 
   @Test

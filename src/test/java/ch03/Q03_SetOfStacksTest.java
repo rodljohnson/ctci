@@ -1,10 +1,10 @@
 package ch03;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q03_SetOfStacksTest {
+class Q03_SetOfStacksTest {
 
   @Test
   public void withBigThreshold() {

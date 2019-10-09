@@ -1,10 +1,10 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q08_FindCommonAncestorTest {
+class Q08_FindCommonAncestorTest {
   private Q08_FindCommonAncestor s = new Q08_FindCommonAncestor();
 
   @Test

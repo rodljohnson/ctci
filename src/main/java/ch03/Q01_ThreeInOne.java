@@ -3,7 +3,7 @@ package ch03;
 /**
  * Describe how you could use a single array to implement three stacks
  */
-public class Q01_ThreeInOne {
+class Q01_ThreeInOne {
 
   private int numberOfStacks = 3;
   private int stackCapacity;
@@ -22,4 +22,4 @@ public class Q01_ThreeInOne {
     throw new UnsupportedOperationException();
   }
 
-  }
+}

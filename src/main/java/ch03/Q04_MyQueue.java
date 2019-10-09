@@ -1,6 +1,6 @@
 package ch03;
 
-public class Q04_MyQueue {
+class Q04_MyQueue {
 
   void enqueue(int val) {
   }

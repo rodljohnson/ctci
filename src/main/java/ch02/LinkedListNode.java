@@ -2,7 +2,7 @@ package ch02;
 
 import java.util.Objects;
 
-public class LinkedListNode {
+class LinkedListNode {
 
   int val;
   LinkedListNode next;

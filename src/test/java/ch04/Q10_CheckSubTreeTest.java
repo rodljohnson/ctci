@@ -1,10 +1,11 @@
 package ch04;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q10_CheckSubTreeTest {
+class Q10_CheckSubTreeTest {
 
   private Q10_CheckSubTree s = new Q10_CheckSubTree();
 

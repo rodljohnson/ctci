@@ -1,12 +1,13 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import java.util.Arrays;
 import java.util.Collections;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q07_BuildOrderTest {
+class Q07_BuildOrderTest {
 
   private Q07_BuildOrder s = new Q07_BuildOrder();
 

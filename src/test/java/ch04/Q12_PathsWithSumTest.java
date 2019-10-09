@@ -1,10 +1,10 @@
 package ch04;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q12_PathsWithSumTest {
+class Q12_PathsWithSumTest {
 
   private Q12_PathsWithSum s = new Q12_PathsWithSum();
 

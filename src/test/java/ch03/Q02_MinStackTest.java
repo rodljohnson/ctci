@@ -1,11 +1,11 @@
 package ch03;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.EmptyStackException;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q02_MinStackTest {
+class Q02_MinStackTest {
 
   private Q02_MinStack s = new Q02_MinStack();
 

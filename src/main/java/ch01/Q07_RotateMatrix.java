@@ -1,12 +1,13 @@
 package ch01;
 
 /**
- * Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes,
- * write a method to rotate the image by 90 degrees. Can you do this in place?
+ * Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a
+ * method to rotate the image by 90 degrees. Can you do this in place?
  */
-public class Q07_RotateMatrix {
+class Q07_RotateMatrix {
 
-    public int[][] rotate(int[][] matrix) {
-        throw new UnsupportedOperationException();
-    }
+  public int[][] rotate(int[][] matrix) {
+    throw new UnsupportedOperationException();
+  }
+
 }

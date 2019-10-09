@@ -1,10 +1,11 @@
 package ch04;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Q04_CheckBalancedTest {
+class Q04_CheckBalancedTest {
 
   private Q04_CheckBalanced s = new Q04_CheckBalanced();
 

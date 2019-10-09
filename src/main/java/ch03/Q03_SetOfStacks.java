@@ -3,7 +3,7 @@ package ch03;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Q03_SetOfStacks {
+class Q03_SetOfStacks {
 
   Q03_SetOfStacks(int threshold) {
   }
