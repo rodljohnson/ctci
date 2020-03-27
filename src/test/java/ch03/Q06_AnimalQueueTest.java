@@ -1,15 +1,15 @@
 package ch03;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q06_AnimalQueueTest {
 
   private Q06_AnimalQueue s = new Q06_AnimalQueue();
 
   @Test
-  public void withOrdinaryQueue() {
+  void withOrdinaryQueue() {
     s.enqueueCat(5);
     s.enqueueDog(4);
     s.enqueueCat(6);
@@ -22,7 +22,7 @@ class Q06_AnimalQueueTest {
   }
 
   @Test
-  public void withCatDogOldest() {
+  void withCatDogOldest() {
     s.enqueueCat(5);
     s.enqueueCat(3);
     s.enqueueDog(6);

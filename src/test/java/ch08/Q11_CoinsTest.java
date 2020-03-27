@@ -1,30 +1,30 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q11_CoinsTest {
 
   private final Q11_Coins s = new Q11_Coins();
 
   @Test
-  public void withZeroCent() {
+  void withZeroCent() {
     assertEquals(1, s.makeChangeWithQuarterDimeNickelPenny(0));
   }
 
   @Test
-  public void withOneCent() {
+  void withOneCent() {
     assertEquals(1, s.makeChangeWithQuarterDimeNickelPenny(2));
   }
 
   @Test
-  public void withTwoCents() {
+  void withTwoCents() {
     assertEquals(1, s.makeChangeWithQuarterDimeNickelPenny(3));
   }
 
   @Test
-  public void with25Cents() {
+  void with25Cents() {
     //25
     //10 10 5
     //10 10 1 1 1 1 1
@@ -42,7 +42,7 @@ class Q11_CoinsTest {
   }
 
   @Test
-  public void with100Cents() {
+  void with100Cents() {
     assertEquals(242, s.makeChangeWithQuarterDimeNickelPenny(100));
   }
 

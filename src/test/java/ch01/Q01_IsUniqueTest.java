@@ -1,26 +1,26 @@
 package ch01;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q01_IsUniqueTest {
 
   private Q01_IsUnique s = new Q01_IsUnique();
 
   @Test
-  public void withEmptyString() {
+  void withEmptyString() {
     assertTrue(s.isUniqueChars(""));
   }
 
   @Test
-  public void withUniqueString() {
+  void withUniqueString() {
     assertTrue(s.isUniqueChars("abcde"));
   }
 
   @Test
-  public void withDuplication() {
+  void withDuplication() {
     assertFalse(s.isUniqueChars("abcda"));
   }
 

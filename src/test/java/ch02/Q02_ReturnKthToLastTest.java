@@ -1,26 +1,26 @@
 package ch02;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q02_ReturnKthToLastTest {
 
   private Q02_ReturnKthToLast s = new Q02_ReturnKthToLast();
 
   @Test
-  public void withOutOfScopeK() {
+  void withOutOfScopeK() {
     assertNull(s.kthToLast(LinkedListNode.of(1, 2, 3), 3));
   }
 
   @Test
-  public void withZero() {
+  void withZero() {
     assertEquals(3, s.kthToLast(LinkedListNode.of(1, 2, 3), 0).val);
   }
 
   @Test
-  public void withNoneZero() {
+  void withNoneZero() {
     assertEquals(2, s.kthToLast(LinkedListNode.of(1, 2, 3), 1).val);
   }
 

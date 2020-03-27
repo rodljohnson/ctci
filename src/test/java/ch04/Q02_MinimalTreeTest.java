@@ -1,16 +1,16 @@
 package ch04;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q02_MinimalTreeTest {
 
   private Q02_MinimalTree s = new Q02_MinimalTree();
 
   @Test
-  public void withOneElement() {
+  void withOneElement() {
     BinaryTreeNode binaryTreeNode = s.buildMinimalTree(new int[] {1});
     assertEquals(1, binaryTreeNode.val);
     assertNull(binaryTreeNode.left);
@@ -18,7 +18,7 @@ class Q02_MinimalTreeTest {
   }
 
   @Test
-  public void withTwoElements() {
+  void withTwoElements() {
     BinaryTreeNode binaryTreeNode = s.buildMinimalTree(new int[] {1, 2});
     assertEquals(1, binaryTreeNode.val);
     assertEquals(2, binaryTreeNode.right.val);
@@ -26,7 +26,7 @@ class Q02_MinimalTreeTest {
   }
 
   @Test
-  public void withThreeElements() {
+  void withThreeElements() {
     BinaryTreeNode binaryTreeNode = s.buildMinimalTree(new int[] {1, 2, 3});
     assertEquals(2, binaryTreeNode.val);
     assertEquals(1, binaryTreeNode.left.val);
@@ -34,7 +34,7 @@ class Q02_MinimalTreeTest {
   }
 
   @Test
-  public void withFourElements() {
+  void withFourElements() {
     BinaryTreeNode binaryTreeNode = s.buildMinimalTree(new int[] {1, 2, 3, 4});
     assertEquals(2, binaryTreeNode.val);
     assertEquals(1, binaryTreeNode.left.val);

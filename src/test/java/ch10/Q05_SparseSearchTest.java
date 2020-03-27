@@ -1,20 +1,20 @@
 package ch10;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q05_SparseSearchTest {
 
   private final Q05_SparseSearch sparseSearch = new Q05_SparseSearch();
 
   @Test
-  public void withEmptyString() {
+  void withEmptyString() {
     assertEquals(-1, sparseSearch.find(new String[]{"hello", "", "world"}, ""));
   }
 
   @Test
-  public void withValidString() {
+  void withValidString() {
     assertEquals(8, sparseSearch.find(
         new String[]{"hello", "", "", "idea", "", "", "", "", "world", "", "", "", "", "", "xylo", "", ""},
         "world"));
@@ -22,14 +22,14 @@ class Q05_SparseSearchTest {
   }
 
   @Test
-  public void withManySparse() {
+  void withManySparse() {
     assertEquals(0, sparseSearch.find(
         new String[]{"hello", "", "", "", "", "", "", "", "", "", "", "", "", ""},
         "hello"));
 
   }
   @Test
-  public void withWordInTheEnd() {
+  void withWordInTheEnd() {
     assertEquals(3, sparseSearch.find(
         new String[]{"", "", "", "hello"},
         "hello"));

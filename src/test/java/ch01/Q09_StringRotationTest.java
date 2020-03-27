@@ -1,41 +1,41 @@
 package ch01;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q09_StringRotationTest {
 
   private Q09_StringRotation s = new Q09_StringRotation();
 
   @Test
-  public void withEmpty() {
+  void withEmpty() {
     assertTrue(s.isRotation("", ""));
   }
 
   @Test
-  public void withSameWord() {
+  void withSameWord() {
     assertTrue(s.isRotation("hello", "hello"));
   }
 
   @Test
-  public void withRotated() {
+  void withRotated() {
     assertTrue(s.isRotation("hello", "llohe"));
   }
 
   @Test
-  public void withSubstring_ButDifferentSize() {
+  void withSubstring_ButDifferentSize() {
     assertFalse(s.isRotation("hello", "llo"));
   }
 
   @Test
-  public void withDifferentWords() {
+  void withDifferentWords() {
     assertFalse(s.isRotation("hello", "world"));
   }
 
   @Test
-  public void withNotRotated() {
+  void withNotRotated() {
     assertFalse(s.isRotation("hello", "oehll"));
   }
 

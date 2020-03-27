@@ -1,35 +1,35 @@
 package ch01;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q04_PalindromePartitionTest {
 
   private Q04_PalindromePartition s = new Q04_PalindromePartition();
 
   @Test
-  public void withEmpty() {
+  void withEmpty() {
     assertTrue(s.isPermutationOfPalindrome(""));
   }
 
   @Test
-  public void withOneChar() {
+  void withOneChar() {
     assertTrue(s.isPermutationOfPalindrome("a"));
   }
 
   @Test
-  public void withTwoWords_OddLetters() {
+  void withTwoWords_OddLetters() {
     assertTrue(s.isPermutationOfPalindrome("acto tac"));
   }
 
   @Test
-  public void withTwoWords_OddLetters_ThreeOccurences() {
+  void withTwoWords_OddLetters_ThreeOccurences() {
     assertTrue(s.isPermutationOfPalindrome("act atac"));
   }
 
   @Test
-  public void withTwoWords_EvenLetters() {
+  void withTwoWords_EvenLetters() {
     assertTrue(s.isPermutationOfPalindrome("act cat"));
   }
 

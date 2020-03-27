@@ -1,27 +1,27 @@
 package ch04;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q08_FindCommonAncestorTest {
   private Q08_FindCommonAncestor s = new Q08_FindCommonAncestor();
 
   @Test
-  public void withOneNode() {
+  void withOneNode() {
     ParentAwareBinaryTreeNode node = new ParentAwareBinaryTreeNode(1);
     assertEquals(node, s.findCommonAncestor(node, node));
   }
 
   @Test
-  public void withTwoNodes() {
+  void withTwoNodes() {
     ParentAwareBinaryTreeNode node = new ParentAwareBinaryTreeNode(1);
     node.addLeft(2);
     assertEquals(node, s.findCommonAncestor(node, node.left));
   }
 
   @Test
-  public void withThreeNodes() {
+  void withThreeNodes() {
     ParentAwareBinaryTreeNode node = new ParentAwareBinaryTreeNode(1);
     node.addLeft(2);
     node.addRight(3);
@@ -29,7 +29,7 @@ class Q08_FindCommonAncestorTest {
   }
 
   @Test
-  public void withMoreNodes() {
+  void withMoreNodes() {
     ParentAwareBinaryTreeNode node = new ParentAwareBinaryTreeNode(1);
     node.addLeft(2);
     ParentAwareBinaryTreeNode ancestor = node.addRight(3);

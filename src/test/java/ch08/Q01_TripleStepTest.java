@@ -1,35 +1,35 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q01_TripleStepTest {
 
   private Q01_TripleStep s = new Q01_TripleStep();
 
   @Test
-  public void withZeroStep() {
+  void withZeroStep() {
     assertEquals(1, s.countWays(0));
   }
 
   @Test
-  public void withOneStep() {
+  void withOneStep() {
     assertEquals(1, s.countWays(1));
   }
 
   @Test
-  public void withTwoSteps() {
+  void withTwoSteps() {
     assertEquals(2, s.countWays(2));
   }
 
   @Test
-  public void withTreeSteps() {
+  void withTreeSteps() {
     assertEquals(4, s.countWays(3));
   }
 
   @Test
-  public void withFourSteps() {
+  void withFourSteps() {
     //3+1
     //  3
     //  2+1
@@ -44,7 +44,7 @@ class Q01_TripleStepTest {
   }
 
   @Test
-  public void withFiveSteps() {
+  void withFiveSteps() {
     assertEquals(13, s.countWays(5));
   }
 

@@ -1,42 +1,42 @@
 package ch01;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q08_ZeroMatrixTest {
 
   private Q08_ZeroMatrix s = new Q08_ZeroMatrix();
 
   @Test
-  public void withEmpty() {
+  void withEmpty() {
     assertTrue(Arrays.deepEquals(new int[][] {{}}, s.zero(new int[][] {{}})));
   }
 
   @Test
-  public void withOneOne() {
+  void withOneOne() {
     assertTrue(Arrays.deepEquals(new int[][] {{1}}, s.zero(new int[][] {{1}})));
   }
 
   @Test
-  public void withOneOne_Zero() {
+  void withOneOne_Zero() {
     assertTrue(Arrays.deepEquals(new int[][] {{0}}, s.zero(new int[][] {{0}})));
   }
 
   @Test
-  public void withOneTwo() {
+  void withOneTwo() {
     assertTrue(Arrays.deepEquals(new int[][] {{0, 0}}, s.zero(new int[][] {{0, 0}})));
   }
 
   @Test
-  public void withTwoTwo() {
+  void withTwoTwo() {
     assertTrue(
         Arrays.deepEquals(new int[][] {{0, 0}, {0, 1}}, s.zero(new int[][] {{0, 1}, {1, 1}})));
   }
 
   @Test
-  public void withThreeTree() {
+  void withThreeTree() {
     assertTrue(Arrays.deepEquals(
         new int[][] {
             {1, 0, 3},

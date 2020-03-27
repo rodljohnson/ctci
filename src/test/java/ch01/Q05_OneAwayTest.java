@@ -1,41 +1,41 @@
 package ch01;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q05_OneAwayTest {
 
   private Q05_OneAway s = new Q05_OneAway();
 
   @Test
-  public void withEmpty() {
+  void withEmpty() {
     assertTrue(s.oneEditAway("", ""));
   }
 
   @Test
-  public void withOneEmpty() {
+  void withOneEmpty() {
     assertTrue(s.oneEditAway("", "b"));
   }
 
   @Test
-  public void withTwoSingleWords() {
+  void withTwoSingleWords() {
     assertTrue(s.oneEditAway("a", "b"));
   }
 
   @Test
-  public void withOneInsertion() {
+  void withOneInsertion() {
     assertTrue(s.oneEditAway("pae", "pale"));
   }
 
   @Test
-  public void withOneDeletion() {
+  void withOneDeletion() {
     assertTrue(s.oneEditAway("pales", "paes"));
   }
 
   @Test
-  public void withOneReplace() {
+  void withOneReplace() {
     assertTrue(s.oneEditAway("pawe", "pave"));
   }
 

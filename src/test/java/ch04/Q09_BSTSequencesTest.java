@@ -1,30 +1,30 @@
 package ch04;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q09_BSTSequencesTest {
 
   private Q09_BSTSequences s = new Q09_BSTSequences();
 
   @Test
-  public void withOneNode() {
+  void withOneNode() {
     assertEquals(Collections.singletonList(Collections.singletonList(1)),
         s.sequences(new BinaryTreeNode(1)));
   }
 
   @Test
-  public void withTwoNodes() {
+  void withTwoNodes() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     root.right = new BinaryTreeNode(2);
     assertEquals(Collections.singletonList(Arrays.asList(1, 2)), s.sequences(root));
   }
 
   @Test
-  public void withThreeNodes() {
+  void withThreeNodes() {
     BinaryTreeNode root = new BinaryTreeNode(2);
     root.left = new BinaryTreeNode(1);
     root.right = new BinaryTreeNode(3);
@@ -32,7 +32,7 @@ class Q09_BSTSequencesTest {
   }
 
   @Test
-  public void withMoreNodes() {
+  void withMoreNodes() {
     BinaryTreeNode root = new BinaryTreeNode(5);
     root.left = new BinaryTreeNode(3);
     root.left.left = new BinaryTreeNode(2);

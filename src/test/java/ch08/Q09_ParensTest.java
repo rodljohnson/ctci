@@ -1,33 +1,33 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q09_ParensTest {
 
   private final Q09_Parens s = new Q09_Parens();
 
   @Test
-  public void withZeroPair() {
+  void withZeroPair() {
     assertEquals(Collections.emptySet(), s.combine(0));
   }
 
   @Test
-  public void withOnePair() {
+  void withOnePair() {
     assertEquals(Collections.singleton("()"), s.combine(1));
   }
 
   @Test
-  public void withTwoPairs() {
+  void withTwoPairs() {
     assertEquals(new HashSet<>(Arrays.asList("()()", "(())")), s.combine(2));
   }
 
   @Test
-  public void withThreePairs() {
+  void withThreePairs() {
     assertEquals(new HashSet<>(Arrays.asList(
         "((()))",
         "(()())",

@@ -1,28 +1,28 @@
 package ch04;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q05_ValidateBSTTest {
 
   private Q05_ValidateBST s = new Q05_ValidateBST();
 
   @Test
-  public void withOneNode() {
+  void withOneNode() {
     assertTrue(s.isBST(new BinaryTreeNode(1)));
   }
 
   @Test
-  public void withTwoNodes() {
+  void withTwoNodes() {
     BinaryTreeNode node = new BinaryTreeNode(2);
     node.left = new BinaryTreeNode(1);
     assertTrue(s.isBST(node));
   }
 
   @Test
-  public void withThreeNodes() {
+  void withThreeNodes() {
     BinaryTreeNode node = new BinaryTreeNode(2);
     node.left = new BinaryTreeNode(1);
     node.right = new BinaryTreeNode(3);

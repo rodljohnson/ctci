@@ -1,15 +1,16 @@
 package ch03;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q04_MyQueueTest {
 
   private Q04_MyQueue s = new Q04_MyQueue();
 
   @Test
-  public void withAllEnqueueAndAllDequeue() {
+  void withAllEnqueueAndAllDequeue() {
     s.enqueue(1);
     s.enqueue(2);
     s.enqueue(3);
@@ -21,7 +22,7 @@ class Q04_MyQueueTest {
   }
 
   @Test
-  public void withInterleavingEnqueueAndDequeue() {
+  void withInterleavingEnqueueAndDequeue() {
     s.enqueue(1);
     assertEquals(1, s.dequeue());
     s.enqueue(2);
@@ -33,11 +34,11 @@ class Q04_MyQueueTest {
     assertEquals(4, s.dequeue());
   }
 
-  @Test(expected = RuntimeException.class)
-  public void withEmptyQueue() {
+  @Test
+  void withEmptyQueue() {
     s.enqueue(1);
     s.dequeue();
-    s.dequeue();
+    assertThrows((RuntimeException.class), () -> s.dequeue());
   }
 
 }

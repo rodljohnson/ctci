@@ -1,14 +1,14 @@
 package ch04;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q01_RouteBetweenNodesTest {
 
   @Test
-  public void withTwoVertex() {
+  void withTwoVertex() {
     Digraph digraph = new Digraph(2);
     digraph.addEdge(0, 1);
     Q01_RouteBetweenNodes routeBetweenNodes = new Q01_RouteBetweenNodes(digraph);
@@ -17,7 +17,7 @@ class Q01_RouteBetweenNodesTest {
   }
 
   @Test
-  public void withMoreVertex() {
+  void withMoreVertex() {
     Digraph digraph = new Digraph(5);
     digraph.addEdge(0, 1);
     digraph.addEdge(0, 2);
@@ -28,7 +28,7 @@ class Q01_RouteBetweenNodesTest {
   }
 
   @Test
-  public void withCycle() {
+  void withCycle() {
     Digraph digraph = new Digraph(3);
     digraph.addEdge(0, 1);
     digraph.addEdge(1, 2);

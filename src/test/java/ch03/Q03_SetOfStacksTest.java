@@ -1,13 +1,14 @@
 package ch03;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q03_SetOfStacksTest {
 
   @Test
-  public void withBigThreshold() {
+
+  void withBigThreshold() {
     Q03_SetOfStacks stack = new Q03_SetOfStacks(100);
     stack.push(3);
     stack.push(4);
@@ -20,7 +21,7 @@ class Q03_SetOfStacksTest {
   }
 
   @Test
-  public void withSmallThreshold() {
+  void withSmallThreshold() {
     Q03_SetOfStacks stack = new Q03_SetOfStacks(2);
     stack.push(3);
     stack.push(4);
@@ -33,7 +34,7 @@ class Q03_SetOfStacksTest {
   }
 
   @Test
-  public void withSmallThreshold_PopAtIndex() {
+  void withSmallThreshold_PopAtIndex() {
     Q03_SetOfStacks stack = new Q03_SetOfStacks(2);
     stack.push(3);
     stack.push(4);

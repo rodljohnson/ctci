@@ -1,21 +1,21 @@
 package ch01;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q07_RotateMatrixTest {
 
   private Q07_RotateMatrix s = new Q07_RotateMatrix();
 
   @Test
-  public void withOneOne() {
+  void withOneOne() {
     assertTrue(Arrays.deepEquals(new int[][] {{1}}, s.rotate(new int[][] {{1}})));
   }
 
   @Test
-  public void withTwoTwo() {
+  void withTwoTwo() {
     assertTrue(Arrays.deepEquals(new int[][] {
             {3, 1},
             {4, 2}
@@ -27,7 +27,7 @@ class Q07_RotateMatrixTest {
   }
 
   @Test
-  public void withThreeThree() {
+  void withThreeThree() {
     assertTrue(Arrays.deepEquals(new int[][] {
             {7, 4, 1},
             {8, 5, 2},

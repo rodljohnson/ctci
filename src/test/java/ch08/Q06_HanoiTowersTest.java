@@ -1,21 +1,21 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q06_HanoiTowersTest {
 
   private Q06_HanoiTowers s = new Q06_HanoiTowers();
 
   @Test
-  public void withOneDisk() {
+  void withOneDisk() {
     assertEquals(Arrays.asList(1, 3), s.leftToRight(1));
   }
 
   @Test
-  public void withTwoDisk() {
+  void withTwoDisk() {
     assertEquals(Arrays.asList(
         1, 2,
         1, 3,
@@ -24,7 +24,7 @@ class Q06_HanoiTowersTest {
   }
 
   @Test
-  public void withThreeDisks() {
+  void withThreeDisks() {
     assertEquals(Arrays.asList(
         1, 3,
         1, 2,

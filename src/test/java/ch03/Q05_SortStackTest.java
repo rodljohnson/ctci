@@ -1,16 +1,16 @@
 package ch03;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Stack;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q05_SortStackTest {
 
   private Q05_SortStack s = new Q05_SortStack();
 
   @Test
-  public void withAlreadySorted() {
+  void withAlreadySorted() {
     Stack<Integer> stack = new Stack<>();
     stack.push(3);
     stack.push(2);
@@ -22,7 +22,7 @@ class Q05_SortStackTest {
   }
 
   @Test
-  public void withUnSorted() {
+  void withUnSorted() {
     Stack<Integer> stack = new Stack<>();
     stack.push(2);
     stack.push(5);

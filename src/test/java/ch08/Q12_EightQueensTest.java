@@ -1,18 +1,18 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.awt.*;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q12_EightQueensTest {
 
   private final Q12_EightQueens s = new Q12_EightQueens();
 
   @Test
-  public void withEightQueens() {
+  void withEightQueens() {
     List<List<Point>> result = s.arrange();
     System.out.println("Solution size " + result.size());
     result.stream()

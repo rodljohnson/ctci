@@ -1,31 +1,31 @@
 package ch04;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.Arrays;
 import java.util.Collections;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q07_BuildOrderTest {
 
   private Q07_BuildOrder s = new Q07_BuildOrder();
 
   @Test
-  public void withOneProject() {
+  void withOneProject() {
     Digraph digraph = new Digraph(1);
     assertEquals(Collections.singletonList(0), s.findBuildOrder(digraph));
   }
 
   @Test
-  public void withTwoProjects() {
+  void withTwoProjects() {
     Digraph digraph = new Digraph(2);
     digraph.addEdge(1, 0);
     assertEquals(Arrays.asList(0, 1), s.findBuildOrder(digraph));
   }
 
   @Test
-  public void withMoreProjects() {
+  void withMoreProjects() {
     Digraph digraph = new Digraph(4);
     digraph.addEdge(3, 1);
     digraph.addEdge(2, 1);
@@ -34,7 +34,7 @@ class Q07_BuildOrderTest {
   }
 
   @Test
-  public void withTwoGroups() {
+  void withTwoGroups() {
     Digraph digraph = new Digraph(4);
     digraph.addEdge(1, 0);
     digraph.addEdge(3, 2);

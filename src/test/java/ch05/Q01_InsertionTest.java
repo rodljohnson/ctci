@@ -1,20 +1,20 @@
 package ch05;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q01_InsertionTest {
 
   private Q01_Insertion s = new Q01_Insertion();
 
   @Test
-  public void withZeros() {
+  void withZeros() {
     assertEquals(0, s.insert(0, 0, 2, 5));
   }
 
   @Test
-  public void withLowInsertion() {
+  void withLowInsertion() {
     int n = 0x00_00_69_00;
     int m = 0x00_00_00_b3;
     int x = 0x00_00_69_b3;
@@ -24,7 +24,7 @@ class Q01_InsertionTest {
   }
 
   @Test
-  public void withHighInsertion() {
+  void withHighInsertion() {
     int n = 0x00_00_69_00;
     int m = 0x00_00_00_b3;
     int x = 0x00_b3_69_00;
@@ -34,7 +34,7 @@ class Q01_InsertionTest {
   }
 
   @Test
-  public void withMiddleInsertion() {
+  void withMiddleInsertion() {
     int n = 0x00_00_69_00;
     int m = 0x00_00_00_b3;
     int x = 0x00_00_6b_30;

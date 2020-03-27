@@ -1,21 +1,21 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q14_BooleanEvaluationTest {
 
   private Q14_BooleanEvaluation s = new Q14_BooleanEvaluation();
 
   @Test
-  public void withEmptyExpression() {
+  void withEmptyExpression() {
     assertEquals(0, s.evaluate("", true));
     assertEquals(0, s.evaluate("", false));
   }
 
   @Test
-  public void withOneValue() {
+  void withOneValue() {
     assertEquals(0, s.evaluate("1", false));
     assertEquals(1, s.evaluate("1", true));
     assertEquals(0, s.evaluate("0", true));
@@ -23,7 +23,7 @@ class Q14_BooleanEvaluationTest {
   }
 
   @Test
-  public void withOneOperator() {
+  void withOneOperator() {
     assertEquals(1, s.evaluate("1&1", true));
     assertEquals(0, s.evaluate("1&0", true));
     assertEquals(0, s.evaluate("0&1", true));
@@ -56,17 +56,17 @@ class Q14_BooleanEvaluationTest {
   }
 
   @Test
-  public void withMultipleOperators() {
+  void withMultipleOperators() {
     assertEquals(2, s.evaluate("0|0|1", true));
   }
 
   @Test
-  public void withMoreOperators() {
+  void withMoreOperators() {
     assertEquals(2, s.evaluate("1^0|0|1", false));
   }
 
   @Test
-  public void withMoreMoreOperators() {
+  void withMoreMoreOperators() {
     assertEquals(10, s.evaluate("0&0&0&1^1|0", true));
   }
 

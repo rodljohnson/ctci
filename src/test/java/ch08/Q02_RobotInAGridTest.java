@@ -1,18 +1,18 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.awt.*;
 import java.util.Arrays;
 import java.util.Collections;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q02_RobotInAGridTest {
 
   private Q02_RobotInAGrid s = new Q02_RobotInAGrid();
 
   @Test
-  public void withAllFeasibleCells() {
+  void withAllFeasibleCells() {
     boolean[][] grid = new boolean[][] {
         {true, true, true},
         {true, true, true},
@@ -26,7 +26,7 @@ class Q02_RobotInAGridTest {
   }
 
   @Test
-  public void withSomeBrokenCells() {
+  void withSomeBrokenCells() {
     boolean[][] grid = new boolean[][] {
         {true, true, true},
         {true, true, false},
@@ -40,7 +40,7 @@ class Q02_RobotInAGridTest {
   }
 
   @Test
-  public void withNoPath() {
+  void withNoPath() {
     boolean[][] grid = new boolean[][] {
         {true, true, true},
         {true, true, false},

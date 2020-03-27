@@ -1,36 +1,36 @@
 package ch02;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q06_PalindromeTest {
 
   private Q06_Palindrome s = new Q06_Palindrome();
 
   @Test
-  public void withEmptyList() {
+  void withEmptyList() {
     assertTrue(s.isPalindrome(LinkedListNode.empty()));
   }
 
   @Test
-  public void withOneElement() {
+  void withOneElement() {
     assertTrue(s.isPalindrome(LinkedListNode.of(1)));
   }
 
   @Test
-  public void withThreeElements() {
+  void withThreeElements() {
     assertTrue(s.isPalindrome(LinkedListNode.of(1, 2, 1)));
   }
 
   @Test
-  public void withFourElements() {
+  void withFourElements() {
     assertTrue(s.isPalindrome(LinkedListNode.of(1, 2, 2, 1)));
   }
 
   @Test
-  public void withFourElements_NotPalindrome() {
+  void withFourElements_NotPalindrome() {
     assertFalse(s.isPalindrome(LinkedListNode.of(1, 2, 2, 3)));
   }
 

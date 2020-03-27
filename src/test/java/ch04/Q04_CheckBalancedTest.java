@@ -1,28 +1,28 @@
 package ch04;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q04_CheckBalancedTest {
 
   private Q04_CheckBalanced s = new Q04_CheckBalanced();
 
   @Test
-  public void withOneNode() {
+  void withOneNode() {
     assertTrue(s.isBalanced(new BinaryTreeNode(1)));
   }
 
   @Test
-  public void withTwoNodes() {
+  void withTwoNodes() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     root.left = new BinaryTreeNode(2);
     assertTrue(s.isBalanced(root));
   }
 
   @Test
-  public void withThreeNodes() {
+  void withThreeNodes() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     root.left = new BinaryTreeNode(2);
     root.right = new BinaryTreeNode(3);
@@ -30,7 +30,7 @@ class Q04_CheckBalancedTest {
   }
 
   @Test
-  public void withFourNodes_Unbalanced() {
+  void withFourNodes_Unbalanced() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     root.left = new BinaryTreeNode(2);
     root.left.left = new BinaryTreeNode(3);
@@ -38,7 +38,7 @@ class Q04_CheckBalancedTest {
   }
 
   @Test
-  public void withSameHeight_Unbalanced() {
+  void withSameHeight_Unbalanced() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     root.left = new BinaryTreeNode(2);
     root.left.left = new BinaryTreeNode(3);

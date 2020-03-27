@@ -1,28 +1,28 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q07_PermutationWithoutDupTest {
 
   private Q07_PermutationWithoutDup s = new Q07_PermutationWithoutDup();
 
   @Test
-  public void withEmptyString() {
+  void withEmptyString() {
     assertEquals(Collections.singleton(""), s.computePermutation(""));
   }
 
   @Test
-  public void withOneChar() {
+  void withOneChar() {
     assertEquals(Collections.singleton("a"), s.computePermutation("a"));
   }
 
   @Test
-  public void withTwoChars() {
+  void withTwoChars() {
     assertEquals(new HashSet<>(Arrays.asList("ab", "ba")), s.computePermutation("ab"));
     assertEquals(new HashSet<>(Arrays.asList("ab", "ba")), s.computePermutation("ba"));
   }

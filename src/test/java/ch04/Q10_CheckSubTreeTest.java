@@ -1,23 +1,23 @@
 package ch04;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q10_CheckSubTreeTest {
 
   private Q10_CheckSubTree s = new Q10_CheckSubTree();
 
   @Test
-  public void withOneNode() {
+  void withOneNode() {
     BinaryTreeNode a = new BinaryTreeNode(1);
     BinaryTreeNode b = new BinaryTreeNode(1);
     assertTrue(s.isSubTree(a, b));
   }
 
   @Test
-  public void withTwoNodes() {
+  void withTwoNodes() {
     BinaryTreeNode a = new BinaryTreeNode(1);
     a.left = new BinaryTreeNode(2);
     BinaryTreeNode b = new BinaryTreeNode(2);
@@ -25,7 +25,7 @@ class Q10_CheckSubTreeTest {
   }
 
   @Test
-  public void withMoreNodes() {
+  void withMoreNodes() {
     BinaryTreeNode a = new BinaryTreeNode(1);
     a.right = new BinaryTreeNode(2);
     a.right.right = new BinaryTreeNode(3);
@@ -40,7 +40,7 @@ class Q10_CheckSubTreeTest {
   }
 
   @Test
-  public void withDiffTree() {
+  void withDiffTree() {
     BinaryTreeNode a = new BinaryTreeNode(1);
     a.left = new BinaryTreeNode(2);
     a.right = new BinaryTreeNode(3);
@@ -49,7 +49,7 @@ class Q10_CheckSubTreeTest {
   }
 
   @Test
-  public void withSamePreOrder() {
+  void withSamePreOrder() {
     BinaryTreeNode a = new BinaryTreeNode(1);
     a.left = new BinaryTreeNode(2);
     a.right = new BinaryTreeNode(3);

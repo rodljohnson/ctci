@@ -1,30 +1,30 @@
 package ch05;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q06_ConversionTest {
 
   private Q06_Conversion s = new Q06_Conversion();
 
   @Test
-  public void withZeroAndOne() {
+  void withZeroAndOne() {
     assertEquals(1, s.convert(0, 1));
   }
 
   @Test
-  public void withOneAndOne() {
+  void withOneAndOne() {
     assertEquals(0, s.convert(1, 1));
   }
 
   @Test
-  public void withOneAndTwo() {
+  void withOneAndTwo() {
     assertEquals(2, s.convert(1, 2));
   }
 
   @Test
-  public void withZeroAndThree() {
+  void withZeroAndThree() {
     assertEquals(2, s.convert(0, 3));
   }
 

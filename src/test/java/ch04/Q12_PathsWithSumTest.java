@@ -1,22 +1,22 @@
 package ch04;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q12_PathsWithSumTest {
 
   private Q12_PathsWithSum s = new Q12_PathsWithSum();
 
   @Test
-  public void withOneNode() {
+  void withOneNode() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     assertEquals(0, s.countPathWithSum(root, 2));
     assertEquals(1, s.countPathWithSum(root, 1));
   }
 
   @Test
-  public void withThreeNodes() {
+  void withThreeNodes() {
     BinaryTreeNode root = new BinaryTreeNode(1);
     root.left = new BinaryTreeNode(1);
     root.right = new BinaryTreeNode(2);
@@ -27,7 +27,7 @@ class Q12_PathsWithSumTest {
   }
 
   @Test
-  public void withMoreDepths() {
+  void withMoreDepths() {
     BinaryTreeNode root = new BinaryTreeNode(10);
     root.left = new BinaryTreeNode(5);
     root.left.left = new BinaryTreeNode(3);

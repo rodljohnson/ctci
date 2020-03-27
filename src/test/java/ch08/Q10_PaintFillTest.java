@@ -1,16 +1,16 @@
 package ch08;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q10_PaintFillTest {
 
   private final Q10_PaintFill s = new Q10_PaintFill();
 
   @Test
-  public void withAllOriginalColorConnected() {
+  void withAllOriginalColorConnected() {
     int[][] screen = new int[][]{
         {1, 0, 1},
         {0, 0, 1},
@@ -30,7 +30,7 @@ class Q10_PaintFillTest {
   }
 
   @Test
-  public void withAllOriginalColorSeparated() {
+  void withAllOriginalColorSeparated() {
     int[][] screen = new int[][]{
         {1, 0, 1},
         {0, 1, 1},

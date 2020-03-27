@@ -1,24 +1,24 @@
 package ch08;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class Q04_PowerSetTest {
 
   private Q04_PowerSet s = new Q04_PowerSet();
 
   @Test
-  public void withEmptySet() {
+  void withEmptySet() {
     assertEquals(Collections.emptySet(), s.subSets(Collections.emptySet()));
   }
 
   @Test
-  public void withOneElement() {
+  void withOneElement() {
     Set<Set<Integer>> subsets = new HashSet<>();
     subsets.add(Collections.emptySet());
     subsets.add(Collections.singleton(1));
@@ -26,7 +26,7 @@ class Q04_PowerSetTest {
   }
 
   @Test
-  public void withTwoElements() {
+  void withTwoElements() {
     Set<Set<Integer>> subsets = new HashSet<>();
     subsets.add(Collections.emptySet());
     subsets.add(Collections.singleton(1));
