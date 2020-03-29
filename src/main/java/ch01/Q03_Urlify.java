@@ -11,7 +11,17 @@ package ch01;
 class Q03_Urlify {
 
   public char[] replaceSpaces(char[] str, int trueLength) {
-    throw new UnsupportedOperationException();
+    int j = str.length - 1;
+    for(int i = str.length - (str.length - trueLength) - 1;i >= 0;i--) {
+      if(str[i] == ' ') {
+        str[j--] = '0';
+        str[j--] = '2';
+        str[j--] = '%';
+      } else {
+        str[j--] = str[i];
+      }
+    }
+    return str;
   }
 
 }
