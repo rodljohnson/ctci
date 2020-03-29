@@ -10,6 +10,8 @@ class Q02_CheckPermutation {
   //O(nlog(n)) time
   // O(1) space
   public boolean permutation(String s, String t) {
+    if(s.length() != t.length())
+      return false;
     return sort(s).equals(sort(t));
   }
 
