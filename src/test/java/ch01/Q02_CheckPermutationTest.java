@@ -39,4 +39,11 @@ class Q02_CheckPermutationTest {
     assertFalse(s.permutation("abc", "ab"));
   }
 
+  @Test
+  void withPairs() {
+    assertTrue(s.permutation("apple", "papel"));
+    assertTrue(s.permutation("carrot", "tarroc"));
+    assertFalse(s.permutation("hello", "llloh"));
+  }
+
 }
