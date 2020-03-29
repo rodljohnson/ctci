@@ -1,7 +1,7 @@
 package ch01;
 
 /**
- * Given two strings,write a method to decide if one is a permutation of the other.
+ * Check Permutation: Given two strings,write a method to decide if one is a permutation of the other.
  */
 class Q02_CheckPermutation {
 
