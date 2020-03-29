@@ -28,6 +28,8 @@ class Q03_UrlifyTest {
   void withTwoSpaces() {
     assertArrayEquals("hello%20world%20bob".toCharArray(),
         s.replaceSpaces("hello world bob    ".toCharArray(), 15));
+    assertArrayEquals("Mr%20John%20Smith".toCharArray(),
+        s.replaceSpaces("Mr John Smith    ".toCharArray(), 13));
   }
 
 }
