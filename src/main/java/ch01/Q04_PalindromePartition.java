@@ -10,6 +10,22 @@ package ch01;
 class Q04_PalindromePartition {
 
   public boolean isPermutationOfPalindrome(String str) {
-    throw new UnsupportedOperationException();
+    int[] buf = new int[26];
+    for(char c : str.toCharArray()) {
+      if(Character.isLetter(c)) {
+        buf[c - 'a']++;
+      }
+    }
+    boolean isOdd = false;
+    for(int n : buf) {
+      if(n % 2 == 1) {
+        if(isOdd) {
+          return false;
+        }
+        isOdd = true;
+      }
+    }
+    return true;
   }
+
 }
