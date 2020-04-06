@@ -48,6 +48,42 @@ class Q08_ZeroMatrixTest {
                 {4, 0, 6},
                 {7, 8, 9}
             })));
+
+    assertTrue(Arrays.deepEquals(
+        new int[][] {
+            {0, 0, 0},
+            {4, 5, 0},
+            {7, 8, 0}
+        }, s.zero(
+            new int[][] {
+                {1, 2, 0},
+                {4, 5, 6},
+                {7, 8, 9}
+            })));
+
+    assertTrue(Arrays.deepEquals(
+        new int[][] {
+            {0, 2, 3},
+            {0, 0, 0},
+            {0, 8, 9}
+        }, s.zero(
+            new int[][] {
+                {1, 2, 3},
+                {0, 5, 6},
+                {7, 8, 9}
+            })));
+
+    assertTrue(Arrays.deepEquals(
+        new int[][] {
+            {0, 2, 0},
+            {0, 0, 0},
+            {0, 0, 0}
+        }, s.zero(
+            new int[][] {
+                {1, 2, 3},
+                {0, 5, 6},
+                {0, 8, 0}
+            })));
   }
 
 }
