@@ -8,7 +8,15 @@ package ch01;
 class Q09_StringRotation {
 
   public boolean isRotation(String s1, String s2) {
-    throw new UnsupportedOperationException();
+    if(s1.length()!= s2.length())
+      return false;
+    String str = s1 + s1;
+    for(int i = 0;i < str.length() - s2.length();i++) {
+      if(str.substring(i, i + s2.length()).equals(s2)) {
+        return true;
+      }
+    }
+    return false;
   }
 
 }
