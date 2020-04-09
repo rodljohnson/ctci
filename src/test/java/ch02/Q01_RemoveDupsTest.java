@@ -21,6 +21,7 @@ class Q01_RemoveDupsTest {
   @Test
   void withDuplications() {
     assertEquals(LinkedListNode.of(1, 2, 3, 4), s.deleteDups(LinkedListNode.of(1, 2, 2, 3, 2, 4)));
+    assertEquals(LinkedListNode.of(1, 2, 3, 4), s.deleteDups(LinkedListNode.of(2, 2, 3, 1, 3, 5, 4, 4)));
   }
 
 }
