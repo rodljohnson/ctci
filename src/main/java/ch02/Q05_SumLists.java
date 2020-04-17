@@ -2,11 +2,11 @@ package ch02;
 
 /**
  * Sum Lists: You have two numbers represented by a linked list, where each node contains a single
- * digit. The digits are stored in normal order, such that the 1 's digit is at the tail of the
+ * digit. The digits are stored in reverse order, such that the 1 's digit is at the head of the
  * list. Write a function that adds the two numbers and returns the sum as a linked list.
- * <p>
- * EXAMPLE Input:(7-> 1 -> 6) + (5 -> 9 -> 2).That is, 716 + 592. Output:1 -> 4 -> 0 -> 8.That is,
- * 1408.
+ * EXAMPLE
+ * Input:(6->1->7) + (2->9->5).That is, 617 + 295.
+ * Output:9->1->2.That is, 912.
  */
 class Q05_SumLists {
 
