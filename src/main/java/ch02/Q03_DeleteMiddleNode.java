@@ -9,7 +9,7 @@ package ch02;
  */
 class Q03_DeleteMiddleNode {
 
-  public void deleteMiddleNode(LinkedListNode n) {
+  public boolean deleteMiddleNode(LinkedListNode n) {
     throw new UnsupportedOperationException();
   }
 
