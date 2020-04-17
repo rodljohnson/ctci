@@ -27,7 +27,7 @@ class Q03_DeleteMiddleNodeTest {
   @Test
   void withNodes() {
     LinkedListNode input1 = LinkedListNode.of(4, 5, 1, 9);
-    s.deleteMiddleNode(input1.next.next);
+    s.deleteMiddleNode(input1.next);
     assertEquals(LinkedListNode.of(4, 1, 9), input1);
 
     LinkedListNode input2 = LinkedListNode.of(4, 5, 1, 9);

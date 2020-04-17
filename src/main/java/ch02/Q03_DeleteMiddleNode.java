@@ -10,7 +10,12 @@ package ch02;
 class Q03_DeleteMiddleNode {
 
   public void deleteMiddleNode(LinkedListNode n) {
-    throw new UnsupportedOperationException();
+    if(n.next == null) {
+      return;
+    }
+    int val = n.next.val;
+    n.val = val;
+    n.next = n.next.next;
   }
 
 }
