@@ -9,13 +9,14 @@ package ch02;
  */
 class Q03_DeleteMiddleNode {
 
-  public void deleteMiddleNode(LinkedListNode n) {
-    if(n.next == null) {
-      return;
+  public boolean deleteMiddleNode(LinkedListNode n) {
+    if(n == null || n.next == null) {
+      return false;
     }
     int val = n.next.val;
     n.val = val;
     n.next = n.next.next;
+    return true;
   }
 
 }

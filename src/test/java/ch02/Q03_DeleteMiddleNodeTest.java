@@ -11,6 +11,14 @@ class Q03_DeleteMiddleNodeTest {
   private Q03_DeleteMiddleNode s = new Q03_DeleteMiddleNode();
 
   @Test
+  void withNull() {
+    assertFalse(s.deleteMiddleNode(null));
+
+    LinkedListNode input = LinkedListNode.of(1);
+    assertFalse(s.deleteMiddleNode(input));
+  }
+
+  @Test
   void withLastNode() {
     LinkedListNode input = LinkedListNode.of(1, 2, 3);
     s.deleteMiddleNode(input.next.next);
