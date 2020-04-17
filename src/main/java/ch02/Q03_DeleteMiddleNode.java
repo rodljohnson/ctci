@@ -9,7 +9,7 @@ package ch02;
  */
 class Q03_DeleteMiddleNode {
 
-  public LinkedListNode deleteMiddleNode(LinkedListNode n) {
+  public void deleteMiddleNode(LinkedListNode n) {
     throw new UnsupportedOperationException();
   }
 
