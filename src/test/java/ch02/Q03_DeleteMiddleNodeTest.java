@@ -12,7 +12,7 @@ class Q03_DeleteMiddleNodeTest {
 
   @Test
   void withNull() {
-    assertFalse(s.deleteMiddleNode(null));
+    assertFalse(s.deleteMiddleNode(LinkedListNode.empty()));
 
     LinkedListNode input = LinkedListNode.of(1);
     assertFalse(s.deleteMiddleNode(input));
